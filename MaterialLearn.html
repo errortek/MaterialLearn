@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Smart Learn</title>
+<script src="https://esm.run/@material/web/all.js" type="module"></script>
+</head>
+<body>
+<script>
+function check() {
+var textfield = document.getElementById("textfield");
+if (textfield.value == "yes") {
+document.getElementById("answer").innerHTML = "Your answer is correct, well done!";
+} else {
+document.getElementById("answer").innerHTML = "The correct answer is yes";
+}
+}
+</script>
+<style>
+  md-filled-text-field {
+    resize: vertical;
+  }
+</style>
+<h1>MaterialLearn</h1>
+<h3>PUBLIC PREVIEW</h3>
+<h4>warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
+<br>
+<h1>Question 1</h1>
+<p>Type <b>yes</b> into the textbox</p>
+<br>
+<md-filled-text-field
+    type="textarea"
+    label="Type your answer here..."
+    id="textfield"
+    rows="3">
+</md-filled-text-field>
+<br>
+<p id="answer"></p>
+<br>
+<md-outlined-button onclick=check()>Mark</md-outlined-button>
+<md-filled-button>Next</md-filled-button>
+</body>
+</html>
