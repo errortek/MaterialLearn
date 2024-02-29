@@ -34,13 +34,28 @@
     }
 </script>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+    :root {
+        --md-ref-typeface-brand: 'Roboto';
+        --md-ref-typeface-plain: system-ui;
+    }
   md-filled-text-field {
     resize: vertical;
   }
+  .smartlearn {
+      font-family: --md-ref-typeface-brand;
+  }
+    .subtitle {
+        font-family: --md-ref-typeface-brand;
+    }
+    .warning {
+        font-family: --md-ref-typeface-brand;
+    }
 </style>
-<h1>MaterialLearn</h1>
-<h3>PUBLIC PREVIEW</h3>
-<h4>warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
+<h1 id="smartlearn">MaterialLearn</h1>
+<h3 id="subtitle">PUBLIC PREVIEW</h3>
+<h4 id="warning">warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
 <br>
 <h1 id="questionnum">Question 1</h1>
 <p id="question">Type <b>yes</b> into the textbox</p>
