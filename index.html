@@ -5,14 +5,33 @@
 </head>
 <body>
 <script>
-function check() {
-var textfield = document.getElementById("textfield");
-if (textfield.value == "yes") {
-document.getElementById("answer").innerHTML = "Your answer is correct, well done!";
-} else {
-document.getElementById("answer").innerHTML = "The correct answer is yes";
-}
-}
+    var question = 1;
+    function check() {
+        var textfield = document.getElementById("textfield");
+        var greeting;
+        if (question == 1) {
+            let val = textfield.value;
+            if (val == "yes") {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is yes";
+            }
+        } else if (question == 2) {
+            let val = textfield.value;
+            if (val == "no") {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is no";
+            }
+        } else {
+        }
+    document.getElementById("answer").innerHTML = greeting;
+    }
+    function next() {
+        question++;
+        document.getElementById("questionnum").innerHTML = "Question 2";
+        document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
+    }
 </script>
 <style>
   md-filled-text-field {
@@ -23,8 +42,8 @@ document.getElementById("answer").innerHTML = "The correct answer is yes";
 <h3>PUBLIC PREVIEW</h3>
 <h4>warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
 <br>
-<h1>Question 1</h1>
-<p>Type <b>yes</b> into the textbox</p>
+<h1 id="questionnum">Question 1</h1>
+<p id="question">Type <b>yes</b> into the textbox</p>
 <br>
 <md-filled-text-field
     type="textarea"
@@ -36,6 +55,6 @@ document.getElementById("answer").innerHTML = "The correct answer is yes";
 <p id="answer"></p>
 <br>
 <md-outlined-button onclick=check()>Mark</md-outlined-button>
-<md-filled-button>Next</md-filled-button>
+<md-filled-button onclick=next()>Next</md-filled-button>
 </body>
 </html>
