@@ -17,39 +17,21 @@
                 greeting = "The correct answer is yes";
             }
         } else if (question == 2) {
-                let val = textfield.value;
-                if (val == "no") {
-                    greeting = "Your answer is correct, well done!";
-                } else {
-                    greeting = "The correct answer is no";
-                }
+            let val = textfield.value;
+            if (val == "no") {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is no";
             }
-            else if (question == 3) {
-                let val = textfield.value;
-                let LowVal = val.toLowerCase()
-                if (LowVal.includes == "hello") {
-                    greeting = "Your answer is correct, well done!";
-                }
-                else if (LowVal.includes == "world") {
-                    greeting = "Your answer is correct, well done!";
-                } else {
-                    greeting = "The correct answer is no";
-                }
         } else {
         }
     document.getElementById("answer").innerHTML = greeting;
     }
     function next() {
         question++;
-        if (question == 2) {
-            document.getElementById("questionnum").innerHTML = "Question 2";
-            document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
-        } else if (question == 3) {
-            document.getElementById("questionnum").innerHTML = "Question 3";
-            document.getElementById("question").innerHTML = "Type anything that contains the words <b>hello</b> and <b>world</b> into the textbox";
-        } else {
-
-        }
+        document.getElementById("questionnum").innerHTML = "Question 2";
+        document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
+    }
 </script>
 <style>
   md-filled-text-field {
