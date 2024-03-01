@@ -18,7 +18,8 @@
                 greeting = "Your answer is correct, well done!";
             } else {
                 greeting = "The correct answer is yes";
-            } else if (question == 2) {
+            }
+        } else if (question == 2) {
                 let val = textfield.value;
                 if (val == "no") {
                     greeting = "Your answer is correct, well done!";
@@ -28,10 +29,11 @@
             }
             else if (question == 3) {
                 let val = textfield.value;
-                if (val.toLowerCase().includes == "hello") {
+                let LowVal = val.toLowerCase()
+                if (LowVal.includes == "hello") {
                     greeting = "Your answer is correct, well done!";
                 }
-                else if (val.toLowerCase().includes == "world") {
+                else if (LowVal.includes == "world") {
                     greeting = "Your answer is correct, well done!";
                 } else {
                     greeting = "The correct answer is no";
