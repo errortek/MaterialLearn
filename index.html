@@ -23,6 +23,13 @@
             } else {
                 greeting = "The correct answer is no";
             }
+        } else if (question == 3) {
+            let val = textfield.value;
+            if (val == "hello world!") {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is no";
+            }
         } else {
         }
     document.getElementById("answer").innerHTML = greeting;
