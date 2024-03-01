@@ -23,15 +23,33 @@
             } else {
                 greeting = "The correct answer is no";
             }
+            else if (question == 3) {
+                let val = textfield.value;
+                if (val.toLowerCase().includes == "hello") {
+                    greeting = "Your answer is correct, well done!";
+                }
+                else if (val.toLowerCase().includes == "world") {
+                    greeting = "Your answer is correct, well done!";
+                } else {
+                    greeting = "The correct answer is no";
+                }
         } else {
         }
     document.getElementById("answer").innerHTML = greeting;
     }
     function next() {
         question++;
-        document.getElementById("questionnum").innerHTML = "Question 2";
-        document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
-    }
+        if (question == 2) {
+            document.getElementById("questionnum").innerHTML = "Question 2";
+            document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
+        }
+        } else if (question == 3) {
+            document.getElementById("questionnum").innerHTML = "Question 3";
+            document.getElementById("question").innerHTML = "Type anything that contains the words <b>hello</b> and <b>world</b> into the textbox";
+        }
+        } else {
+
+        }
 </script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
