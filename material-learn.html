@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>MaterialLearn</title>
+    <script src="https://esm.run/@material/web/all.js" type="module"></script>
+</head>
+<body>
+<script>
+    var question = 1;
+    function check() {
+        var textfield = document.getElementById("textfield");
+        var greeting;
+        if (question == 1) {
+            let val = textfield.value;
+            if (val == "yes") {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is yes";
+            }
+        } else if (question == 2) {
+            let val = textfield.value;
+            if (val == "no") {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is no";
+            }
+        } else if (question == 3) {
+            let val = textfield.value;
+            if (val.includes("hello world!") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is anything that contains the string \"hello world!\"";
+            }
+        } else if (question == 4) {
+            let val = textfield.value;
+            if (val.includes("antonym") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("antonyms") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is that the words <i>like</i> and <i>don't like</i> are \"antonyms\"";
+            }
+        } else if (question == 5) {
+            let val = textfield.value;
+            if (val.includes("material") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else {
+                greeting = "The correct answer is that glass is a <i>shiny and transparent material</i>";
+            }
+        } else {
+        }
+    document.getElementById("answer").innerHTML = greeting;
+    }
+    function next() {
+        question++;
+        if (question == 2) {
+            document.getElementById("questionnum").innerHTML = "Question 2";
+            document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
+        } else if (question == 3) {
+            document.getElementById("questionnum").innerHTML = "Question 3";
+            document.getElementById("question").innerHTML = "Type anything containing <b>hello world!</b> into the textbox";
+        } else if (question == 4) {
+            document.getElementById("questionnum").innerHTML = "Question 4";
+            document.getElementById("question").innerHTML = "What are the words <b>like</b> and <b>don't like</b>, in relation to each other?";
+        } else if (question == 5) {
+            document.getElementById("questionnum").innerHTML = "Question 5";
+            document.getElementById("question").innerHTML = "What is <b>glass</b>?";
+        } else {
+        }
+    }
+</script>
+<style>
+  md-filled-text-field {
+    resize: vertical;
+  }
+</style>
+<h1 id="smartlearn">MaterialLearn</h1>
+<h3 id="subtitle">PUBLIC PREVIEW</h3>
+<h4 id="warning">warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
+<br>
+<h1 id="questionnum">Question 1</h1>
+<p id="question">Type <b>yes</b> into the textbox</p>
+<br>
+<md-filled-text-field
+    type="textarea"
+    label="Type your answer here..."
+    id="textfield"
+    rows="3">
+</md-filled-text-field>
+<br>
+<p id="answer"></p>
+<br>
+<md-outlined-button onclick=check()>Mark</md-outlined-button>
+<md-filled-button onclick=next()>Next</md-filled-button>
+</body>
+</html>
+
+
