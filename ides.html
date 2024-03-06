@@ -11,40 +11,60 @@
         var greeting;
         if (question == 1) {
             let val = textfield.value;
-            if (val == "yes") {
+            if (val == "Integrated Development Environment") {
                 greeting = "Your answer is correct, well done!";
             } else {
-                greeting = "The correct answer is yes";
+                greeting = "The correct answer is <i>Integrated Development Environment</i>";
             }
         } else if (question == 2) {
             let val = textfield.value;
-            if (val == "no") {
+            if (val.includes("syntax highlighting") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("code editor window") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if
+ (val.includes("debugging tools") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("runtime environment") == true) {
                 greeting = "Your answer is correct, well done!";
             } else {
-                greeting = "The correct answer is no";
+                greeting = "The correct answers include <i>syntax highlighting</i> or <i>debugging tools</i> (indicative answers)";
             }
         } else if (question == 3) {
             let val = textfield.value;
-            if (val.includes("hello world!") == true) {
+            if (val.includes("writing code") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("writing programs") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if
+ (val.includes("developing programs") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("developing apps") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("developing applications") == true) {
                 greeting = "Your answer is correct, well done!";
             } else {
-                greeting = "The correct answer is anything that contains the string \"hello world!\"";
+                greeting = "The correct answer is that it is used for <i>dveeloping applications</i> (indicative answer)";
             }
         } else if (question == 4) {
             let val = textfield.value;
-            if (val.includes("antonym") == true) {
+            if (val.includes("translates code line by line") == true) {
                 greeting = "Your answer is correct, well done!";
-            } else if (val.includes("antonyms") == true) {
+            } else if (val.includes("the entire code") == true) {
                 greeting = "Your answer is correct, well done!";
             } else {
-                greeting = "The correct answer is that the words <i>like</i> and <i>don't like</i> are \"antonyms\"";
+                greeting = "The correct answer is that a compiler <i>translates the code line by line</i> and/or <i>translates the entire code at once</i> (indicative answer(s))";
             }
         } else if (question == 5) {
             let val = textfield.value;
-            if (val.includes("material") == true) {
+            if (val.includes("translates code as the line is run") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("translates the next line") == true) {
+                greeting = "Your answer is correct, well done!";
+            } else if (val.includes("does not translate the entire code at once") == true) {
                 greeting = "Your answer is correct, well done!";
             } else {
-                greeting = "The correct answer is that glass is a <i>shiny and transparent material</i>";
+                greeting = "The correct answer is that an interpreter <i>translates a line as it is run</i> (indicative answer)";
             }
         } else {
         }
@@ -54,16 +74,16 @@
         question++;
         if (question == 2) {
             document.getElementById("questionnum").innerHTML = "Question 2";
-            document.getElementById("question").innerHTML = "Type <b>no</b> into the textbox";
+            document.getElementById("question").innerHTML = "State <b>two</b> common features of an IDE";
         } else if (question == 3) {
             document.getElementById("questionnum").innerHTML = "Question 3";
-            document.getElementById("question").innerHTML = "Type anything containing <b>hello world!</b> into the textbox";
+            document.getElementById("question").innerHTML = "What is the principal <b>use</b> of an IDE?";
         } else if (question == 4) {
             document.getElementById("questionnum").innerHTML = "Question 4";
-            document.getElementById("question").innerHTML = "What are the words <b>like</b> and <b>don't like</b>, in relation to each other?";
+            document.getElementById("question").innerHTML = "What is a <b>compiler</b>?";
         } else if (question == 5) {
             document.getElementById("questionnum").innerHTML = "Question 5";
-            document.getElementById("question").innerHTML = "What is <b>glass</b>?";
+            document.getElementById("question").innerHTML = "What is an <b>interpreter</b>?";
         } else {
         }
     }
@@ -78,7 +98,7 @@
 <h4 id="warning">warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
 <br>
 <h1 id="questionnum">Question 1</h1>
-<p id="question">Type <b>yes</b> into the textbox</p>
+<p id="question">What does <b>IDE</b> stand for?</p>
 <br>
 <md-filled-text-field
     type="textarea"
