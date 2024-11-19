@@ -129,6 +129,11 @@
     }
     function next() {
         question++;
+	var greeting;
+        document.getElementById("answer").innerHTML = greeting;
+	var textfield = document.getElementById("textfield");
+        let val = textfield.value;
+	val = "";
 	greeting = "";
         if (question == 2) {
             document.getElementById("questionnum").innerHTML = "Question 2";
