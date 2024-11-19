@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>MaterialLearn</title>
+    <script src="https://esm.run/@material/web/all.js" type="module"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+.roboto-thin {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+</style>
+</head>
+<body>
+<script>
+    var question = 1;
+    function check() {
+    }
+    function next() {
+    }
+</script>
+<style>
+.column {
+        display: flex;
+        flex-direction: column;
+      }
+.radio-label {
+        display: flex;
+        align-items: center;
+      }
+</style>
+<h1 id="smartlearn" class="roboto-bold">MaterialLearn</h1>
+<h3 id="subtitle" class="roboto-bold">PUBLIC PREVIEW</h3>
+<h4 id="warning" class="roboto-medium">warning: may not be stable and is constantly being worked on, so proceed with caution!</h4>
+<br>
+<h1 id="questionnum" class="roboto-bold">Question 1</h1>
+<p id="question" class="roboto-medium">What does "RAM" stand for</p>
+<br>
+<div class="column" role="radiogroup" aria-label="Quiz Radiobuttons">
+        <div class="radio-label">
+          <md-radio
+            aria-label="Restricted Access Memory"
+            id="radio1"
+            name="with-labels"
+            touch-target="wrapper"
+            ?disabled=${disabled}>
+          </md-radio>
+          <label for="radio1">Restricted Access Memory</label>
+        </div>
+        <div class="radio-label">
+          <md-radio
+            aria-label="Random Access Memory"
+            id="radio2"
+            name="with-labels"
+            touch-target="wrapper"
+            ?disabled=${disabled}>
+          </md-radio>
+          <label for="radio2">Random Access Memory</label>
+        </div>
+        <div class="radio-label">
+          <md-radio
+            aria-label="Recent Address Memory"
+            id="radio3"
+            name="with-labels"
+            touch-target="wrapper"
+            ?disabled=${disabled}>
+          </md-radio>
+          <label for="radio3">Recent Address Memory</label>
+        </div>
+      </div>
+<br>
+<p id="answer" class="roboto-medium"></p>
+<br>
+<md-outlined-button onclick=check()>Mark</md-outlined-button>
+<md-filled-button onclick=next()>Next</md-filled-button>
+</body>
+</html>
